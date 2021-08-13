@@ -30,66 +30,156 @@ class RequisitionListWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(5.0),
             border: Border.all(color: Colors.grey.shade300),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Column(
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Txt(
-                    txt: 'ORDER ID - ID23232323',
-                    txtColor: Colors.amber,
-                    txtSize: 14,
-                    fontWeight: FontWeight.bold,
-                    padding: 5,
-                    onTap:  (){},
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Txt(
+                        txt: 'ORDER ID - ID23232323',
+                        txtColor: Colors.amber,
+                        txtSize: 14,
+                        fontWeight: FontWeight.bold,
+                        padding: 5,
+                        onTap:  (){},
+                      ),
+
+                      Txt(
+                        txt: 'Product Name',
+                        txtColor: Colors.black,
+                        txtSize: 16,
+                        fontWeight: FontWeight.bold,
+                        padding: 5,
+                        onTap: () {
+                        },
+                      ),
+
+                      Visibility(
+                        visible: !isRequisitionTabSelected,
+                        child: Txt(
+                          txt: 'Posted                         Next Delivery',
+                          txtColor: Colors.black87,
+                          txtSize: 14,
+                          fontWeight: FontWeight.normal,
+                          padding: 5,
+                          onTap: () {
+                          },
+                        ),
+                      ),
+
+                      Txt(
+                        txt: isRequisitionTabSelected? '29-07-21  13.40':
+                        '29-07-21  13.40         29-07-21  13.40',
+                        txtColor: Colors.black54,
+                        txtSize: 14,
+                        fontWeight: FontWeight.normal,
+                        padding: 5,
+                        onTap: () {
+                        },
+                      ),
+
+                      Visibility(
+                        visible: !isRequisitionTabSelected,
+                        child: Txt(
+                          txt: 'Duration 1 day',
+                          txtColor: Colors.black54,
+                          txtSize: 14,
+                          fontWeight: FontWeight.normal,
+                          padding: 5,
+                          onTap: () {
+                          },
+                        ),
+                      ),
+                    ],
                   ),
 
-                  Txt(
-                    txt: 'Restaurant Name',
-                    txtColor: Colors.black,
-                    txtSize: 16,
-                    fontWeight: FontWeight.bold,
-                    padding: 5,
-                    onTap: () {
-                    },
+                  Column(
+                    children: [
+                      Txt(
+                        txt: '5 Items',
+                        txtColor: Colors.black,
+                        txtSize: 14,
+                        fontWeight: FontWeight.normal,
+                        padding: 5,
+                        onTap: () {
+                        },
+                      ),
+
+                      Txt(
+                        txt: 'Available',
+                        txtColor: Colors.green,
+                        txtSize: 14,
+                        fontWeight: FontWeight.normal,
+                        padding: 5,
+                        onTap: () {},
+                      ),
+                    ],
                   ),
 
-                  Visibility(
-                    visible: !isRequisitionTabSelected,
-                    child: Txt(
-                      txt: 'Posted    Next Delivery     Duration',
-                      txtColor: Colors.black54,
-                      txtSize: 14,
-                      fontWeight: FontWeight.normal,
-                      padding: 5,
-                      onTap: () {
-                      },
-                    ),
-                  ),
-
-                  Txt(
-                    txt: '29-07-21    13.40              1 day',
-                    txtColor: Colors.black54,
-                    txtSize: 14,
-                    fontWeight: FontWeight.normal,
-                    padding: 5,
-                    onTap: () {
-                    },
-                  ),
                 ],
               ),
 
-              Txt(
-                txt: '5 Items',
-                txtColor: Colors.black,
-                txtSize: 14,
-                fontWeight: FontWeight.normal,
-                padding: 5,
-                onTap: () {
-                },
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: InkWell(
+                      child: Container(
+                        height: 40,
+                        margin: const EdgeInsets.only(top: 8, right: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.1),
+                          border: Border.all(color: Colors.grey.shade400),
+                        ),
+                        alignment: Alignment.center,
+                        child: Txt(
+                          txt: 'Edit',
+                          txtColor: Colors.black,
+                          txtSize: 14,
+                          fontWeight: FontWeight.normal,
+                          padding: 3,
+                          onTap:  (){},
+                        ),
+                      ),
+                      onTap: () {
+
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: InkWell(
+                      child: Container(
+                        height: 40,
+                        margin: const EdgeInsets.only(top: 8, left: 4,),
+                        decoration: BoxDecoration(
+                          color: Colors.pinkAccent.withOpacity(0.1),
+                          border: Border.all(color: Colors.grey.shade400),
+                        ),
+                        alignment: Alignment.center,
+                        child: Txt(
+                          txt: 'Delete',
+                          txtColor: Colors.black,
+                          txtSize: 14,
+                          fontWeight: FontWeight.normal,
+                          padding: 3,
+                          onTap:  (){},
+                        ),
+                      ),
+                      onTap: () {
+
+                      },
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

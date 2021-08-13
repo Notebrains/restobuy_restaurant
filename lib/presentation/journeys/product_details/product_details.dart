@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/bottom_sheet_qty_ui.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
 
@@ -136,18 +138,31 @@ class ProductDetails extends StatelessWidget{
                       style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8, bottom: 5),
-                      child: Text(
-                        'Quantity Available - 15 pcs',
-                        textAlign: TextAlign.start,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        softWrap: false,
-                        style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.normal, fontSize: 18, color: Colors.black87),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8, bottom: 5),
+                        child: Text(
+                          'Quantity Available - 15 pcs',
+                          textAlign: TextAlign.start,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: false,
+                          style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.normal, fontSize: 18, color: Colors.black87),
+                        ),
                       ),
+
+                      onTap: (){
+                        showBottomSheetUi(context);
+                      },
                     ),
 
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 24, bottom: 24),
+                      child: Button(text: 'Add to Requisition', onPressed: (){
+
+                      }),
+                    ),
                   ],
                 ),
               ),

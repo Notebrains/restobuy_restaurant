@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animator/flutter_animator.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
-import 'package:restobuy_restaurant_flutter/common/extensions/common_fun.dart';
-import 'package:restobuy_restaurant_flutter/presentation/journeys/invoice_details/invoice_details.dart';
-import 'package:restobuy_restaurant_flutter/presentation/libraries/liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+import 'package:restobuy_restaurant_flutter/presentation/journeys/requisitions/create_requisition.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
 
 import 'requisition_list_widget.dart';
 
@@ -46,7 +42,7 @@ class _RequisitionsState extends State<Requisition> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: 40,
+                  height: 45,
                   margin: const EdgeInsets.only(bottom: 5, top: 12, left: 16, right: 4),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -69,6 +65,7 @@ class _RequisitionsState extends State<Requisition> {
                     },
                   ),
                 ),
+
                 Container(
                   height: 45,
                   margin: const EdgeInsets.only(bottom: 5, top: 12, left: 4, right: 4),
@@ -102,6 +99,21 @@ class _RequisitionsState extends State<Requisition> {
             child: buildUi(),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          //Navigator.of(context).pushNamed(RouteList.create_requisitions);
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CreateRequisition(isScreenRequisition: isRequisitionTabSelected,),
+              ));
+        },
+        child: Icon(Icons.add, color: Colors.white, size: 30,),
+        backgroundColor: Colors.amber.shade600,
+        tooltip: 'Pressed',
+        elevation: 5,
+        splashColor: Colors.grey,
       ),
     );
   }

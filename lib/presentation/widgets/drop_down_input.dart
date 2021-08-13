@@ -22,10 +22,9 @@ class AppDropdownInput<T> extends StatelessWidget {
         return InputDecorator(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
-                horizontal: 20.0, vertical: 15.0),
+                horizontal: 16.0, vertical: 16.0),
             labelText: hintText,
-            border:
-            OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
           ),
           isEmpty: value == null || value == '',
           child: DropdownButtonHideUnderline(

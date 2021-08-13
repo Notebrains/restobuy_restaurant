@@ -4,6 +4,7 @@ import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dar
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img_radius.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/drop_down_input.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/search_bar.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt.dart';
 
@@ -14,7 +15,56 @@ class Product extends StatelessWidget{
       appBar: appBarIcBack(context, 'Product'),
       body: Column(
         children: [
-          SearchBar(),
+          //SearchBar(),
+
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 0),
+            child: AppDropdownInput(
+              hintText: "Select Supplier",
+              options: ["Choose Option", "Restaurant One", "Restaurant Two"],
+              value: 'Choose Option',
+              onChanged: (String? value) {
+                /*setState(() {
+                    gender = value;
+                    // state.didChange(newValue);
+                  });*/
+              },
+              getLabel: (String value) => value,
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 0),
+            child: AppDropdownInput(
+              hintText: "Choose Category",
+              options: ["Choose Option", "Restaurant One", "Restaurant Two"],
+              value: 'Choose Option',
+              onChanged: (String? value) {
+                /*setState(() {
+                        gender = value;
+                        // state.didChange(newValue);
+                      });*/
+              },
+              getLabel: (String value) => value,
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 0),
+            child: AppDropdownInput(
+              hintText: "Choose Sub Category",
+              options: ["Choose Option", "Restaurant One", "Restaurant Two"],
+              value: 'Choose Option',
+              onChanged: (String? value) {
+                /*setState(() {
+                        gender = value;
+                        // state.didChange(newValue);
+                      });*/
+              },
+              getLabel: (String value) => value,
+            ),
+          ),
+
           Expanded(
             child: SlideInUp(
               child: Container(

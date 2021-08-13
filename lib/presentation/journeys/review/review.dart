@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
+import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
 import 'package:restobuy_restaurant_flutter/presentation/libraries/star_rating.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img_radius.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/txt.dart';
 
 class Review extends StatelessWidget {
   static const String routeName = '/review';
@@ -14,6 +16,16 @@ class Review extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       appBar: appBarIcBack(context, 'Reviews'),
       body: buildUi(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed(RouteList.add_review);
+        },
+        child: Icon(Icons.add, color: Colors.white, size: 30,),
+        backgroundColor: Colors.amber.shade600,
+        tooltip: 'Pressed',
+        elevation: 5,
+        splashColor: Colors.grey,
+      ),
     );
   }
 
@@ -150,6 +162,63 @@ class Review extends StatelessWidget {
                               Text(
                                 '25 jan, 2021',
                                 style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.normal, fontSize: 14, color: Colors.black54),
+                              ),
+                            ],
+                          ),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: InkWell(
+                                  child: Container(
+                                    height: 40,
+                                    margin: const EdgeInsets.only(top: 8, right: 4),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.withOpacity(0.1),
+                                      border: Border.all(color: Colors.grey.shade400),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Txt(
+                                      txt: 'Edit',
+                                      txtColor: Colors.black,
+                                      txtSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                      padding: 3,
+                                      onTap:  (){},
+                                    ),
+                                  ),
+                                  onTap: () {
+
+                                  },
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: InkWell(
+                                  child: Container(
+                                    height: 40,
+                                    margin: const EdgeInsets.only(top: 8, left: 4,),
+                                    decoration: BoxDecoration(
+                                      color: Colors.pinkAccent.withOpacity(0.1),
+                                      border: Border.all(color: Colors.grey.shade400),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Txt(
+                                      txt: 'Delete',
+                                      txtColor: Colors.black,
+                                      txtSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                      padding: 3,
+                                      onTap:  (){},
+                                    ),
+                                  ),
+                                  onTap: () {
+
+                                  },
+                                ),
                               ),
                             ],
                           ),

@@ -16,7 +16,6 @@ class RaiseInvoice extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
             Container(
               margin: EdgeInsets.only(left: 20, right: 20, top: 18),
               child: AppDropdownInput(

@@ -3,6 +3,7 @@ import 'package:flutter_animator/flutter_animator.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
 import 'package:restobuy_restaurant_flutter/presentation/journeys/invoice/invoice_list_widget.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img_radius.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
@@ -36,7 +37,7 @@ class PurchaseOrderDetails extends StatelessWidget {
                     ),
 
                     Txt(
-                      txt: 'Restaurant Name',
+                      txt: 'Supplier Name',
                       txtColor: Colors.black,
                       txtSize: 16,
                       fontWeight: FontWeight.bold,

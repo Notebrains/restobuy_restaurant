@@ -33,6 +33,17 @@ class _OrdersState extends State<Transaction> {
       backgroundColor: Colors.grey[100],
       resizeToAvoidBottomInset: false,
       body: buildUi(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed(RouteList.add_transaction);
+        },
+        child: Icon(Icons.add, color: Colors.white, size: 30,),
+        backgroundColor: Colors.amber.shade600,
+        tooltip: 'Pressed',
+        elevation: 5,
+        splashColor: Colors.grey,
+      ),
+
     );
   }
 

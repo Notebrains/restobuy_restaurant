@@ -64,7 +64,7 @@ class RequisitionDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TxtIcRow(
-                      txt: 'Download Requisition',
+                      txt: 'Download',
                       txtColor: Colors.red,
                       txtSize: 14,
                       fontWeight: FontWeight.bold,
@@ -94,9 +94,6 @@ class RequisitionDetails extends StatelessWidget {
   }
 
   Widget buildListUi() {
-    String dropdownValue = 'Select';
-    var items =  ['Select', 'Available','Unavailable','Partially Available',];
-
     return Expanded(
       child: SlideInUp(
         child: Container(
@@ -145,33 +142,27 @@ class RequisitionDetails extends StatelessWidget {
                               ),
 
                               Txt(
-                                txt: 'QTY-3',
+                                txt: 'QTY-3     Unit - 5kg',
                                 txtColor: Colors.grey.shade600,
                                 txtSize: 14,
                                 fontWeight: FontWeight.normal,
                                 padding: 3,
                                 onTap: () {
-                                  showBottomSheetUi(context);
+
                                 },
                               ),
 
-                              DropdownButton(
-                                underline: Container(),
-                                value: dropdownValue,
-                                icon: Icon(Icons.keyboard_arrow_down),
-                                items:items.map((String items) {
-                                  return DropdownMenuItem(
-                                      value: items,
-                                      child: Text(items)
-                                  );
-                                }
-                                ).toList(),
-                                onChanged: (String? newValue){
-                                 /* setState(() {
-                                    dropdownValue = newValue!;
-                                  });*/
+                              Txt(
+                                txt: 'Available',
+                                txtColor: Colors.green,
+                                txtSize: 14,
+                                fontWeight: FontWeight.normal,
+                                padding: 3,
+                                onTap: () {
+
                                 },
                               ),
+
                             ],
                           ),
                         ),
@@ -187,74 +178,4 @@ class RequisitionDetails extends StatelessWidget {
     );
   }
 
-  showBottomSheetUi(BuildContext context) {
-    showModalBottomSheet<void>(
-        backgroundColor: Colors.transparent,
-        context: context,
-        builder: (BuildContext context) {
-          return StatefulBuilder(builder: (BuildContext context, StateSetter state) {
-            return Container(
-              height: 350,
-              padding: EdgeInsets.only(bottom: 26, left: 12),
-              decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35.0),
-                topLeft: Radius.circular(35.0),
-              ),
-
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.shade400,
-                  blurRadius: 24,
-                ),
-              ],
-            ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(top: 26, bottom: 16),
-                    child: Text(
-                      "Partially Available",
-                      textAlign: TextAlign.start,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: false,
-                      style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.bold, fontSize: 28, color: Colors.black87),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                    child: Divider(
-                      height: 1,
-                      thickness: 1,
-                      color: Colors.grey[300],
-                    ),
-                  ),
-
-
-                  TxtIf(
-                    txt: 'Quantity',
-                    initialTxtValue: '',
-                    hint: 'Enter qty here',
-                    icon: null,
-                    isReadOnly: false,
-                    textInputType: TextInputType.text,
-                    //validator: validator,
-                    //onSaved: onSaved,
-                  ),
-
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20.0, 32, 20.0, 0),
-                    child: Button(text: 'SUBMIT', onPressed: () {
-
-                    },),
-                  ),
-                ],
-              ),
-            );
-          });
-        });
-  }
 }

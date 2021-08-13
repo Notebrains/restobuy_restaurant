@@ -27,67 +27,89 @@ class PurchaseOrderListWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(5.0),
             border: Border.all(color: Colors.grey.shade300),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Column(
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Txt(
-                    txt: 'ORDER ID - 23232323',
-                    txtColor: Colors.amber,
-                    txtSize: 14,
-                    fontWeight: FontWeight.bold,
-                    padding: 5,
-                    onTap:  (){},
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Txt(
+                        txt: 'ORDER ID - 23232323',
+                        txtColor: Colors.amber,
+                        txtSize: 14,
+                        fontWeight: FontWeight.bold,
+                        padding: 5,
+                        onTap:  (){},
+                      ),
+
+                      Txt(
+                        txt: 'Restaurant Name',
+                        txtColor: Colors.black,
+                        txtSize: 16,
+                        fontWeight: FontWeight.bold,
+                        padding: 5,
+                        onTap: () {
+                        },
+                      ),
+
+                      Txt(
+                        txt: '29-07-21  13.40',
+                        txtColor: Colors.black54,
+                        txtSize: 14,
+                        fontWeight: FontWeight.normal,
+                        padding: 5,
+                        onTap: () {
+                        },
+                      ),
+                    ],
                   ),
 
-                  Txt(
-                    txt: 'Restaurant Name',
-                    txtColor: Colors.black,
-                    txtSize: 16,
-                    fontWeight: FontWeight.bold,
-                    padding: 5,
-                    onTap: () {
-                    },
-                  ),
-
-                  Txt(
-                    txt: '29-07-21  13.40',
-                    txtColor: Colors.black54,
-                    txtSize: 14,
-                    fontWeight: FontWeight.normal,
-                    padding: 5,
-                    onTap: () {
-                    },
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Txt(
+                        txt: '5 Items',
+                        txtColor: Colors.black,
+                        txtSize: 14,
+                        fontWeight: FontWeight.normal,
+                        padding: 5,
+                        onTap: () {
+                        },
+                      ),
+                      Txt(
+                        txt: '\$100.00',
+                        txtColor: Colors.black,
+                        txtSize: 16,
+                        fontWeight: FontWeight.bold,
+                        padding: 5,
+                        onTap: (){},
+                      ),
+                    ],
                   ),
                 ],
               ),
 
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Txt(
-                    txt: '5 Items',
-                    txtColor: Colors.black,
-                    txtSize: 14,
-                    fontWeight: FontWeight.normal,
-                    padding: 5,
-                    onTap: () {
-                    },
-                  ),
-                  Txt(
-                    txt: '\$100.00',
-                    txtColor: Colors.black,
-                    txtSize: 16,
-                    fontWeight: FontWeight.bold,
-                    padding: 5,
-                    onTap: (){},
-                  ),
-                ],
+              Container(
+                height: 40,
+                margin: const EdgeInsets.only(top: 8, left: 4,),
+                decoration: BoxDecoration(
+                  color: Colors.pinkAccent.withOpacity(0.1),
+                  border: Border.all(color: Colors.grey.shade400),
+                ),
+                alignment: Alignment.center,
+                child: Txt(
+                  txt: 'Delete',
+                  txtColor: Colors.black,
+                  txtSize: 14,
+                  fontWeight: FontWeight.normal,
+                  padding: 3,
+                  onTap:  (){},
+                ),
               ),
             ],
           ),

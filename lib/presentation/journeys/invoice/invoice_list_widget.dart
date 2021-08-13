@@ -40,16 +40,16 @@ class InvoiceListWidget extends StatelessWidget {
                     txtColor: Colors.amber,
                     txtSize: 14,
                     fontWeight: FontWeight.bold,
-                    padding: 5,
+                    padding: 3,
                     onTap:  (){},
                   ),
 
                   Txt(
-                    txt: 'Restaurant Name',
+                    txt: 'Supplier Name',
                     txtColor: Colors.black,
-                    txtSize: 16,
+                    txtSize: 18,
                     fontWeight: FontWeight.bold,
-                    padding: 5,
+                    padding: 3,
                     onTap: () {
                     },
                   ),
@@ -59,7 +59,7 @@ class InvoiceListWidget extends StatelessWidget {
                     txtColor: Colors.black54,
                     txtSize: 14,
                     fontWeight: FontWeight.normal,
-                    padding: 5,
+                    padding: 3,
                     onTap: () {
                     },
                   ),

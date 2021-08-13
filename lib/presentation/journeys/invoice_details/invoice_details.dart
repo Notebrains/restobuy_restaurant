@@ -37,7 +37,7 @@ class InvoiceDetails extends StatelessWidget {
                       ),
 
                       Txt(
-                        txt: 'Restaurant Name',
+                        txt: 'Supplier Name',
                         txtColor: Colors.black,
                         txtSize: 16,
                         fontWeight: FontWeight.bold,
@@ -94,7 +94,7 @@ class InvoiceDetails extends StatelessWidget {
           buildListUi(),
 
           Container(
-            margin: const EdgeInsets.only(left: 8, right: 8, top: 8, bottom: 8),
+            margin: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -175,14 +175,14 @@ class InvoiceDetails extends StatelessWidget {
     return Expanded(
       child: SlideInUp(
         child: Container(
-          margin: EdgeInsets.only(bottom: 12),
+          margin: EdgeInsets.only(bottom: 5),
           color: Colors.grey[100],
           child: ListView.builder(
-              itemCount: 3,
+              itemCount: 7,
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   child: Container(
-                    margin: const EdgeInsets.only(left: 16, right: 16, top: 5, bottom: 5),
+                    margin: const EdgeInsets.only(left: 16, right: 16, top: 3, bottom: 5),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5.0),
