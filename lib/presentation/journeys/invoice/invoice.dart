@@ -5,7 +5,7 @@ import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dar
 import 'package:restobuy_restaurant_flutter/common/extensions/common_fun.dart';
 import 'package:restobuy_restaurant_flutter/presentation/journeys/invoice_details/invoice_details.dart';
 import 'package:restobuy_restaurant_flutter/presentation/libraries/liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
 
 import 'invoice_list_widget.dart';
@@ -33,7 +33,7 @@ class _OrdersState extends State<Invoice> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBack(context, 'Invoice'),
+      appBar: appBarIcBackCart(context, 'Invoice'),
       backgroundColor: Colors.grey[100],
       resizeToAvoidBottomInset: false,
       body: Column(

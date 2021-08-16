@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:restobuy_restaurant_flutter/common/extensions/common_fun.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/drop_down_input.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
@@ -19,7 +19,7 @@ class _AddTransactionState extends State<AddTransaction> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBack(context, 'Add Transaction'),
+      appBar: appBarIcBackCart(context, 'Add Transaction'),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(

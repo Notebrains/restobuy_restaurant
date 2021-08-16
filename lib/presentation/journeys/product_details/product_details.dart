@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
+import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/badge_icon.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/bottom_sheet_qty_ui.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img.dart';
@@ -41,25 +43,23 @@ class ProductDetails extends StatelessWidget{
                     ),
                   ),
                 ),
-                /*Align(
+
+                Align(
                   alignment: Alignment.topRight,
                   child: Padding(
                       padding: EdgeInsets.only(right: 20.0, top: 40),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ProductDetails()));
-                        },
-                        child: Stack(
-                          children: <Widget>[
-                            Icon(
-                              Icons.notifications,
-                              size: 30,
-                            ),
-
-                          ],
+                      child: BadgeIcon(
+                        icon: Icon(
+                          Icons.shopping_cart_rounded,
+                          size: 25,
                         ),
-                      )),
-                ),*/
+                        badgeCount: 5,
+                        onTap: () {
+                          Navigator.of(context).pushNamed(RouteList.cart);
+                        },
+                      ),
+                ),
+                ),
               ],
             ),
           ),

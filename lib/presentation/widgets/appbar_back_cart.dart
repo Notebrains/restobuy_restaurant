@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
 
-PreferredSizeWidget appBarIcBack (BuildContext context, String text){
+import 'badge_icon.dart';
+
+PreferredSizeWidget appBarIcBackCart (BuildContext context, String text){
   return AppBar(
     centerTitle: false,
     elevation: 3,
@@ -17,5 +20,18 @@ PreferredSizeWidget appBarIcBack (BuildContext context, String text){
         Navigator.pop(context);
       },
     ),
+
+    actions: [
+      BadgeIcon(
+        icon: Icon(
+          Icons.shopping_cart_rounded,
+          size: 25,
+        ),
+        badgeCount: 5,
+        onTap: () {
+          Navigator.of(context).pushNamed(RouteList.cart);
+        },
+      ),
+    ],
   );
 }

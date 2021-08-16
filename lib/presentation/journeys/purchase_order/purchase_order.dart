@@ -3,7 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animator/flutter_animator.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
 import 'package:restobuy_restaurant_flutter/common/extensions/common_fun.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
 
 import 'purchase_order_list_widget.dart';
@@ -32,7 +32,7 @@ class _OrdersState extends State<PurchaseOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBack(context, 'PurchaseOrder'),
+      appBar: appBarIcBackCart(context, 'PurchaseOrder'),
       backgroundColor: Colors.grey[100],
       resizeToAvoidBottomInset: false,
       body: Column(

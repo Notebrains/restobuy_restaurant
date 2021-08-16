@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 
 import 'transaction_list_widget.dart';
 
@@ -29,7 +29,7 @@ class _OrdersState extends State<Transaction> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBack(context, 'Transaction'),
+      appBar: appBarIcBackCart(context, 'Transaction'),
       backgroundColor: Colors.grey[100],
       resizeToAvoidBottomInset: false,
       body: buildUi(),

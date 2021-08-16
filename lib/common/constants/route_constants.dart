@@ -26,5 +26,6 @@ class RouteList {
   static const String requisitions = '/requisitions';
   static const String create_requisitions = '/create_requisitions';
   static const String requisitions_details = '/requisitions_details';
+  static const String cart = '/cart';
 
 }

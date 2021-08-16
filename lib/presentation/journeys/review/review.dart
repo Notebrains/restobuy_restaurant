@@ -3,7 +3,7 @@ import 'package:flutter_animator/flutter_animator.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
 import 'package:restobuy_restaurant_flutter/presentation/libraries/star_rating.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_ic_back.dart';
+import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img_radius.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt.dart';
 
@@ -14,7 +14,7 @@ class Review extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: appBarIcBack(context, 'Reviews'),
+      appBar: appBarIcBackCart(context, 'Reviews'),
       body: buildUi(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

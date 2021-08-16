@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restobuy_restaurant_flutter/presentation/journeys/raise_disput/raise_dispute.dart';
 import 'package:restobuy_restaurant_flutter/presentation/journeys/review/add_review.dart';
+import 'journeys/cart/cart.dart';
 import 'journeys/product_details/product_details.dart';
 import 'journeys/profile/profile.dart';
 import 'journeys/purchase_order/purchase_order.dart';
@@ -52,5 +53,6 @@ class Routes {
         RouteList.requisitions_details: (context) => RequisitionDetails(),
         RouteList.profile: (context) => Profile(),
         RouteList.setting: (context) => Setting(),
+        RouteList.cart: (context) => Cart(),
       };
 }
