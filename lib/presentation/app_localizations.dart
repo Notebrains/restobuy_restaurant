@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../common/constants/languages.dart';
 
 class AppLocalizations {
   final Locale locale;
@@ -29,30 +28,4 @@ class AppLocalizations {
   String? translate(String key) {
     return _localizedStrings[key];
   }
-
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationDelegate();
-}
-
-class _AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
-  const _AppLocalizationDelegate();
-
-  @override
-  bool isSupported(Locale locale) {
-    return Languages.languages
-        .map((e) => e.code)
-        .toList()
-        .contains(locale.languageCode);
-  }
-
-  @override
-  Future<AppLocalizations> load(Locale locale) async {
-    AppLocalizations localizations = AppLocalizations(locale);
-    await localizations.load();
-    return localizations;
-  }
-
-  @override
-  bool shouldReload(covariant LocalizationsDelegate<AppLocalizations> old) =>
-      false;
 }

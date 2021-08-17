@@ -4,10 +4,8 @@ import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dar
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
 import 'package:restobuy_restaurant_flutter/presentation/libraries/star_rating.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/cached_net_img_radius.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/drop_down_input.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/search_bar.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt.dart';
 
 class Product extends StatelessWidget{
@@ -76,7 +74,7 @@ class Product extends StatelessWidget{
                   crossAxisCount: 2,
                   crossAxisSpacing: 12.0,
                   mainAxisSpacing: 4.0,
-                  childAspectRatio: 4/5,
+                  childAspectRatio: 4/5.6,
                   physics: BouncingScrollPhysics(),
                   children: List.generate(20, (index) {
                     return InkWell(
@@ -106,13 +104,32 @@ class Product extends StatelessWidget{
 
                             Padding(
                               padding: const EdgeInsets.only(left: 8),
-                              child: Txt(txt: 'Lorem ipsum restus', txtColor: Colors.black, txtSize: 12, fontWeight: FontWeight.normal,
-                                  padding: 0, onTap: () {},
+                              child: Txt(txt: '\$74 - \$120', txtColor: Colors.amber.shade700, txtSize: 12,
+                                fontWeight: FontWeight.normal, padding: 0, onTap: () {},
+                              ),
+                            ),
+
+                            Container(
+                              height: 25,
+                              margin: EdgeInsets.fromLTRB(8.0, 5, 8.0, 0),
+                              child: AppDropdownInput(
+                                hintText: "Select",
+                                options: ["Select", "6 pcs", "4x5 pcs multipack"],
+                                value: 'Select',
+                                onChanged: (String? value) {
+                                  /*setState(() {
+                                gender = value;
+                                // state.didChange(newValue);
+                                });*/
+                                },
+                                getLabel: (String value) => value,
                               ),
                             ),
 
                             Expanded(
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Txt(txt: '  Qty ', txtColor: Colors.black, txtSize: 12, fontWeight: FontWeight.normal,
                                     padding: 0, onTap: () {},
@@ -120,7 +137,7 @@ class Product extends StatelessWidget{
 
                                   Container(
                                     height: 25,
-                                    width: 60,
+                                    width: 72,
                                     margin: EdgeInsets.fromLTRB(5.0, 0, 5.0, 0),
                                     child: TextFormField(
                                       initialValue: '1',

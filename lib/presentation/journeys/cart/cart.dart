@@ -29,12 +29,10 @@ class CartState extends State<Cart> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: appBarIcBack(context, 'Cart'),
-        backgroundColor: Colors.grey[100],
-        body: cartUi(),
-      ),
+    return Scaffold(
+      appBar: appBarIcBack(context, 'Cart'),
+      backgroundColor: Colors.grey[100],
+      body: cartUi(),
     );
   }
 
@@ -84,7 +82,7 @@ class CartState extends State<Cart> {
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 softWrap: false,
-                                style: TextStyle( fontWeight: FontWeight.bold, fontSize: 14, color: Colors.black),
+                                style: TextStyle( fontWeight: FontWeight.bold, fontSize: 14, color: Colors.amber.shade700),
                               ),
                             ),
                             Text(
@@ -114,7 +112,7 @@ class CartState extends State<Cart> {
                                 margin: const EdgeInsets.only(top: 3),
                                 decoration: BoxDecoration(
                                   //color: Colors.blueAccent,
-                                  border: Border.all(color: Colors.grey.withOpacity(0.5), width: 1.0),
+                                  border: Border.all(color: Colors.amber.withOpacity(0.5), width: 1.0),
                                   borderRadius: new BorderRadius.circular(4.0),
                                 ),
                                 child: new Center(
@@ -158,9 +156,9 @@ class CartState extends State<Cart> {
                     text: 'Total\n\$ 500.00',
                     size: 16,
                     icon: null,
-                    txtColors: Colors.black,
+                    txtColors: Colors.grey.shade700,
                     bgColors: Colors.grey.shade200,
-                    icColors: Colors.blueAccent,
+                    icColors: Colors.amber,
                     onPressed: (){
 
                     },

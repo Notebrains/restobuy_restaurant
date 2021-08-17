@@ -27,8 +27,9 @@ class Strings {
       'Restobuy Supplier is a highly addictive high score competitive trump card style game. Join the game now and beat others.';
   static const String txt_lorem_ipsum_big =
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt.';
-  static const String txt_lorem_ipsum_small = 'Lorem ipsum dolor sit\nconsecte pcing.';
+  static const String txt_lorem_ipsum_small = 'Lorem ipsum dolor sit consecte pcing.';
   static const String txt_lorem_ipsum_mid = 'Lorem ipsum dolor sit consecte pcing dolor sit consecte pcing.';
+  static const String txt_desc = 'Though smaller in size than chicken eggs, quail eggs contain more fat, protein, iron, and vitamin.\nThe Add-on Benefits of Fresh Egg:\nAntibiotic free\nFree from growth hormones\nCarefully selected';
   static const String txt_review = 'This is one of the finest books that I have come across for group work. This book helps in understanding the whole concept of Group Work.';
 
   static const String welcomeScreenTitle = '''Ready to find your favorite lesson?''';

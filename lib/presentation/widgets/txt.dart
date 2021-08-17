@@ -26,7 +26,7 @@ class Txt extends StatelessWidget {
         child: Text(
           txt,
           style: TextStyle(fontFamily: 'Roboto', fontWeight: fontWeight, fontSize: txtSize, color: txtColor),
-          maxLines: 4,
+          maxLines: 8,
           softWrap: false,
           overflow: TextOverflow.ellipsis,
         ),
