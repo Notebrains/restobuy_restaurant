@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1243425027/android.device_info_plus.iml" filepath="$PROJECT_DIR$/.idea/modules/1243425027/android.device_info_plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1322943401/android.firebase_core.iml" filepath="$PROJECT_DIR$/.idea/modules/1322943401/android.firebase_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-639930216/android.firebase_messaging.iml" filepath="$PROJECT_DIR$/.idea/modules/-639930216/android.firebase_messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1917189563/android.flutter_inappwebview.iml" filepath="$PROJECT_DIR$/.idea/modules/-1917189563/android.flutter_inappwebview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1553570129/android.flutter_local_notifications.iml" filepath="$PROJECT_DIR$/.idea/modules/-1553570129/android.flutter_local_notifications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1669986667/android.flutter_pdfview.iml" filepath="$PROJECT_DIR$/.idea/modules/1669986667/android.flutter_pdfview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1555283251/android.flutter_plugin_android_lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/1555283251/android.flutter_plugin_android_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-920858814/android.image_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/-920858814/android.image_picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-792197744/android.native_pdf_renderer.iml" filepath="$PROJECT_DIR$/.idea/modules/-792197744/android.native_pdf_renderer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1550203552/android.path_provider_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-1550203552/android.path_provider_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1557130124/android.shared_preferences_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-1557130124/android.shared_preferences_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/574125971/android.sqflite.iml" filepath="$PROJECT_DIR$/.idea/modules/574125971/android.sqflite.iml" />
+    </modules>
+  </component>
+</project>
