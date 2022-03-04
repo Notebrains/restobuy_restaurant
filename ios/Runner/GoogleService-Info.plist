@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>77347090571-9m1falnlulo0m3i3f6kc3euc2h27jui2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.77347090571-9m1falnlulo0m3i3f6kc3euc2h27jui2</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>77347090571-mo4962jdfkri2jfq37o38poat7tucptq.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBjJM3cXdxdVmigkI8Ngv0yt8NncwSfyt0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>77347090571</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.restobuy.restaurant</string>
+	<key>PROJECT_ID</key>
+	<string>restobuy</string>
+	<key>STORAGE_BUCKET</key>
+	<string>restobuy.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:77347090571:ios:ae53f1a56ff94b3d25648e</string>
+</dict>
+</plist>

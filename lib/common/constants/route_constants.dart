@@ -2,12 +2,9 @@ class RouteList {
   RouteList._();
 
   static const String initial = '/';
-  static const String home = '/home';
   static const String login = '/login';
-  static const String movieDetail = '/movie-detail';
-  static const String watchTrailer = '/watch-trailer';
-  static const String favorite = '/favorite';
 
+  static const String forgot_password = '/forgot_password';
   static const String home_screen = '/home_screen';
   static const String profile = '/profile';
   static const String setting = '/setting';
@@ -26,6 +23,7 @@ class RouteList {
   static const String requisitions = '/requisitions';
   static const String create_requisitions = '/create_requisitions';
   static const String requisitions_details = '/requisitions_details';
-  static const String cart = '/cart';
+  static const String my_requisition = '/my_requisition';
+  static const String dispute = '/dispute';
 
 }

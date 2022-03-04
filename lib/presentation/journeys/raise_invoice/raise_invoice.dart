@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/strings.dart';
+import 'package:restobuy_restaurant_flutter/presentation/journeys/my_requisition/custom_app_bar.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/drop_down_input.dart';
+import 'package:restobuy_restaurant_flutter/presentation/libraries/drop_down_input.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_input_field.dart';
 
 class RaiseInvoice extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBackCart(context, 'Raise Invoice'),
+      appBar: CustomAppBar(context: context, title: 'Raise Invoice'),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 18),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 18),
               child: AppDropdownInput(
                 hintText: "Select Restaurant",
-                options: ["Choose Option", "Restaurant One", "Restaurant Two"],
+                options: const ["Choose Option", "Restaurant One", "Restaurant Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -32,22 +33,11 @@ class RaiseInvoice extends StatelessWidget{
               ),
             ),
 
-            TxtIf(
-              txt: 'Select PO',
-              initialTxtValue: '',
-              hint: '',
-              icon: null,
-              isReadOnly: false,
-              textInputType: TextInputType.text,
-              //validator: validator,
-              //onSaved: onSaved,
-            ),
-
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 18),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 18),
               child: AppDropdownInput(
                 hintText: "Select PO",
-                options: ["Choose Option", "PO One", "PO Two"],
+                options: const ["Choose Option", "PO One", "PO Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -67,6 +57,7 @@ class RaiseInvoice extends StatelessWidget{
               icon: null,
               isReadOnly: false,
               textInputType: TextInputType.text,
+              onSaved: (String value) {  },
               //validator: validator,
               //onSaved: onSaved,
             ),
@@ -78,6 +69,7 @@ class RaiseInvoice extends StatelessWidget{
               icon: null,
               isReadOnly: false,
               textInputType: TextInputType.text,
+              onSaved: (String value) {  },
               //validator: validator,
               //onSaved: onSaved,
             ),
@@ -89,12 +81,13 @@ class RaiseInvoice extends StatelessWidget{
               icon: null,
               isReadOnly: false,
               textInputType: TextInputType.text,
+              onSaved: (String value) {  },
               //validator: validator,
               //onSaved: onSaved,
             ),
 
             Padding(
-              padding: EdgeInsets.fromLTRB(20.0, 24, 20.0, 8),
+              padding: const EdgeInsets.fromLTRB(20.0, 24, 20.0, 8),
               child: Button(text: 'Generate Invoice', onPressed: () {  },),
             ),
           ],

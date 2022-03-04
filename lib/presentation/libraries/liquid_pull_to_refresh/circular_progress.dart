@@ -71,6 +71,8 @@ class _CircularProgressState extends State<CircularProgress> {
 }
 
 class CircularProgressIndicator extends StatefulWidget {
+  const CircularProgressIndicator({Key? key}) : super(key: key);
+
   @override
   _CircularProgressIndicatorState createState() =>
       _CircularProgressIndicatorState();

@@ -7,5 +7,5 @@ Widget cachedNetImage(String url) => CachedNetworkImage(
   imageUrl: url,
   progressIndicatorBuilder: (context, url, downloadProgress) =>
       Image.asset('assets/animations/gifs/loading_line.gif', width: 50, height: 100),
-  errorWidget: (context, url, error) => Icon(Icons.image_not_supported_outlined),
+  errorWidget: (context, url, error) => const Icon(Icons.image_not_supported_outlined),
 );

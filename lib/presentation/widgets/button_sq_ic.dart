@@ -37,7 +37,9 @@ class ButtonSqIc extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(0.0)),
         ),
       ),
-        icon: Icon(icon, color: icColors,),
+        icon: Visibility(
+            visible: icon != null,
+            child: Icon(icon, color: icColors,)),
         label: Text(text,
           style: TextStyle(
             fontSize: size,

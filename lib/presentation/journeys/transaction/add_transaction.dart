@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:restobuy_restaurant_flutter/common/extensions/common_fun.dart';
+import 'package:restobuy_restaurant_flutter/presentation/journeys/my_requisition/custom_app_bar.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/drop_down_input.dart';
+import 'package:restobuy_restaurant_flutter/presentation/libraries/drop_down_input.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_input_field.dart';
 
@@ -19,7 +20,7 @@ class _AddTransactionState extends State<AddTransaction> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBackCart(context, 'Add Transaction'),
+      appBar: CustomAppBar(context: context, title: 'Add Transaction'),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
@@ -27,7 +28,7 @@ class _AddTransactionState extends State<AddTransaction> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 24),
               child: AppDropdownInput(
                 hintText: "Select Supplier",
                 options: ["Choose Option", "Supplier One", "Supplier Two"],
@@ -43,7 +44,7 @@ class _AddTransactionState extends State<AddTransaction> {
             ),
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 24),
               child: AppDropdownInput(
                 hintText: "Select Invoice",
                 options: ["Choose Option", "Invoice One", "Invoice Two"],
@@ -64,12 +65,13 @@ class _AddTransactionState extends State<AddTransaction> {
               hint: 'Enter here',
               isReadOnly: false,
               textInputType: TextInputType.text,
+              onSaved: (value){},
             ),
 
             InkWell(
               child: Container(
                 height: 45,
-                margin: const EdgeInsets.only(bottom: 5, top: 16, left: 20, right: 20),
+                margin: const EdgeInsets.only(bottom: 5, top: 20, left: 20, right: 20),
                 padding: const EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -92,15 +94,16 @@ class _AddTransactionState extends State<AddTransaction> {
             ),
 
             TxtIf(
-              txt: 'Amount in \$',
+              txt: 'Amount in (\$)',
               initialTxtValue: '',
               hint: 'Enter here',
               isReadOnly: false,
               textInputType: TextInputType.number,
+              onSaved: (value){},
             ),
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 24),
               child: AppDropdownInput(
                 hintText: "Payment Mode",
                 options: ["Choose Option", "Payment Mode One", "Payment Mode Two"],
@@ -117,7 +120,7 @@ class _AddTransactionState extends State<AddTransaction> {
 
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 24, bottom: 24),
               child: AppDropdownInput(
                 hintText: "Payment Status",
                 options: ["Choose Option", "Payment Status One", "Payment Status Two"],

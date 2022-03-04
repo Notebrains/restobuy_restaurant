@@ -6,7 +6,6 @@ class Txt extends StatelessWidget {
   final double txtSize;
   final FontWeight fontWeight;
   final double padding;
-  final Function onTap;
 
   const Txt({
     Key? key,
@@ -15,7 +14,6 @@ class Txt extends StatelessWidget {
     required this.txtSize,
     required this.fontWeight,
     required this.padding,
-    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -30,10 +28,6 @@ class Txt extends StatelessWidget {
           softWrap: false,
           overflow: TextOverflow.ellipsis,
         ),
-
-        onTap: (){
-          onTap();
-        },
       ),
     );
   }

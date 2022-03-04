@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:restobuy_restaurant_flutter/common/extensions/common_fun.dart';
+import 'package:restobuy_restaurant_flutter/presentation/journeys/my_requisition/custom_app_bar.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/appbar_back_cart.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/button.dart';
-import 'package:restobuy_restaurant_flutter/presentation/widgets/drop_down_input.dart';
+import 'package:restobuy_restaurant_flutter/presentation/libraries/drop_down_input.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_ic_row.dart';
 import 'package:restobuy_restaurant_flutter/presentation/widgets/txt_input_field.dart';
 
@@ -23,18 +24,18 @@ class _CreateRequisitionState extends State<CreateRequisition> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarIcBackCart(context, 'Create Requisition'),
+      appBar: CustomAppBar(context: context, title: 'Create Requisition'),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 8),
               child: AppDropdownInput(
                 hintText: "Select Supplier",
-                options: ["Choose Option", "Supplier One", "Supplier Two"],
+                options: const ["Choose Option", "Supplier One", "Supplier Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -75,10 +76,10 @@ class _CreateRequisitionState extends State<CreateRequisition> {
             ),
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 8),
               child: AppDropdownInput(
                 hintText: "Select Category",
-                options: ["Choose Option", "Category One", "Category Two"],
+                options: const ["Choose Option", "Category One", "Category Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -92,10 +93,10 @@ class _CreateRequisitionState extends State<CreateRequisition> {
 
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 8),
               child: AppDropdownInput(
                 hintText: "Select Sub Category",
-                options: ["Choose Option", "Sub Category One", "Sub Category Two"],
+                options: const ["Choose Option", "Sub Category One", "Sub Category Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -109,10 +110,10 @@ class _CreateRequisitionState extends State<CreateRequisition> {
 
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 8),
               child: AppDropdownInput(
                 hintText: "Select Product",
-                options: ["Choose Option", "Product One", "Product Two"],
+                options: const ["Choose Option", "Product One", "Product Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -126,10 +127,10 @@ class _CreateRequisitionState extends State<CreateRequisition> {
 
 
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 8),
               child: AppDropdownInput(
                 hintText: "Select Variant",
-                options: ["Choose Option", "Variant One", "Variant Two"],
+                options: const ["Choose Option", "Variant One", "Variant Two"],
                 value: 'Choose Option',
                 onChanged: (String? value) {
                   /*setState(() {
@@ -147,6 +148,7 @@ class _CreateRequisitionState extends State<CreateRequisition> {
                 hint: 'Enter here',
                 isReadOnly: false,
                 textInputType: TextInputType.number,
+              onSaved: (String value) {  },
             ),
 
             Container(
@@ -167,7 +169,7 @@ class _CreateRequisitionState extends State<CreateRequisition> {
       DateTime? picked = await showDatePicker(
           context: context,
           initialEntryMode: DatePickerEntryMode.calendar,
-          firstDate: DateTime.now().subtract(Duration(days: 15000)),
+          firstDate: DateTime.now().subtract(const Duration(days: 15000)),
           lastDate: DateTime(DateTime.now().year + 1),
           initialDate: fromDate,
           currentDate: fromDate,
@@ -178,17 +180,18 @@ class _CreateRequisitionState extends State<CreateRequisition> {
           builder: (context, child) {
             return Theme(
               data: ThemeData(
-                textTheme: TextTheme(bodyText2: TextStyle(color: Colors.green)),
+                textTheme: const TextTheme(bodyText2: const TextStyle(color: Colors.green)),
               ),
               child: child!,
             );
           });
 
-      if (picked != null && picked != fromDate)
+      if (picked != null && picked != fromDate) {
         setState(() {
           fromDate = picked;
           fromDateStr = formatDateForUs(fromDate);
         });
+      }
     });
   }
 }

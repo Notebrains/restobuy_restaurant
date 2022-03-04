@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
 
-import 'badge_icon.dart';
+import '../libraries/badge_icon.dart';
 
 PreferredSizeWidget appBarIcBackCart (BuildContext context, String text){
   return AppBar(
     centerTitle: false,
-    elevation: 3,
+    elevation: 0.5,
     title: Text(
-      text, style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Roboto'),
+      text, style: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
     ),
     backgroundColor: Colors.white,
     leading: GestureDetector(
-      child: Icon(
+      child: const Icon(
         Icons.arrow_back_ios,
         color: Colors.black87,// add custom icons also
       ),
@@ -23,13 +23,14 @@ PreferredSizeWidget appBarIcBackCart (BuildContext context, String text){
 
     actions: [
       BadgeIcon(
-        icon: Icon(
+        icon: const Icon(
           Icons.shopping_cart_rounded,
           size: 25,
+          color: Colors.black87,
         ),
         badgeCount: 5,
         onTap: () {
-          Navigator.of(context).pushNamed(RouteList.cart);
+          Navigator.of(context).pushNamed(RouteList.my_requisition);
         },
       ),
     ],

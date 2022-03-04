@@ -1,31 +1,78 @@
-import 'package:flutter/cupertino.dart';
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:restobuy_restaurant_flutter/common/constants/route_constants.dart';
-
-import 'badge_icon.dart';
+import 'package:restobuy_restaurant_flutter/presentation/journeys/my_requisition/cart_counter.dart';
 
 PreferredSizeWidget appBarHome(BuildContext context) {
   return AppBar(
-    title: Image.asset('assets/images/logo_horizon.png', fit: BoxFit.cover, width: 120),
-    centerTitle: false,
+    title: Row(
+      children: const [
+        Text(
+          'Resto',
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+
+        Text(
+          'Buy',
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.red,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+    centerTitle: true,
     backgroundColor: Colors.white,
-    elevation: 3,
+    elevation: 0.5,
+    toolbarHeight: 60,
+    leadingWidth: 56,
+    leading: Padding(
+      padding: const EdgeInsets.only(left: 16),
+      child: Image.asset('assets/icons/pngs/logo.png'),
+    ),
+
     actions: <Widget>[
-      IconButton(
-        icon: Icon(
-          Icons.notifications_none_rounded,
+      /*IconButton(
+        icon: const Icon(
+          Icons.notifications_active,
           color: Colors.black87,
         ),
         onPressed: () {},
-      ),
-      BadgeIcon(
-        icon: Icon(
-          Icons.shopping_cart_rounded,
-          size: 25,
-        ),
-        badgeCount: 5,
-        onTap: () {
-          Navigator.of(context).pushNamed(RouteList.cart);
+      ),*/
+      Consumer<CartCounterNotifier>(
+        builder: (context, cartCounter, child) {
+          //print('----cart Count : ${cartCounter.value}');
+          return Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: Badge(
+              elevation: cartCounter.value != 0 ? 3 : 0,
+              position: BadgePosition.topEnd(top: 3, end: 3),
+              animationDuration: const Duration(milliseconds: 300),
+              animationType: BadgeAnimationType.slide,
+              badgeColor: cartCounter.value != 0 ? Colors.orangeAccent : Colors.transparent,
+              toAnimate: true,
+              badgeContent: Text(
+                cartCounter.value != 0 ? cartCounter.value.toString(): '',
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              child: IconButton(
+                icon: const Icon(Icons.shopping_cart_rounded, color: Colors.black,),
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteList.my_requisition);
+                },
+              ),
+            ),
+          );
         },
       ),
     ],

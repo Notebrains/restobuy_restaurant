@@ -1,7 +1,7 @@
 class Strings {
   Strings._();
 
-  static const String appName = 'Restobuy Supplier';
+  static const String appName = 'RestoBuy Supplier';
   static const String appNameCaps = 'RESTOBUY SUPPLIER';
 
   static const String imgUrlTest =
@@ -34,7 +34,5 @@ class Strings {
 
   static const String welcomeScreenTitle = '''Ready to find your favorite lesson?''';
 
-  static const String welcomeScreenSubTitle = '''Anyone can join the millions of
-members in our community to learn
-cutting-edge skills.''';
+  static const String welcomeScreenSubTitle = 'Anyone can join the millions of members in our community to learn cutting-edge skills.';
 }
